@@ -1,8 +1,10 @@
 class ssh::server(
   $ensure               = present,
   $storeconfigs_enabled = true,
+  $shosts_equiv         = [],
   $options              = {}
 ) inherits ssh::params {
+  validate_array($::ssh::server::shosts_equiv)
   $merged_options = merge($ssh::params::sshd_default_options, $options)
 
   include ssh::server::install

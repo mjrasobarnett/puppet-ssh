@@ -95,4 +95,5 @@ class ssh::params {
       'HashKnownHosts'       => 'yes',
     },
   }
+  $shosts_equiv = '/etc/ssh/shosts.equiv'
 }

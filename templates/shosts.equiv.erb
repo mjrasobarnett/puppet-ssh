@@ -1,0 +1,4 @@
+# File is managed by Puppet
+<% scope.lookupvar('ssh::server::shosts_equiv').each do |h| -%>
+<%= h %>
+<% end -%>
